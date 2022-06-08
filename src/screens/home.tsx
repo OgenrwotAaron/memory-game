@@ -1,22 +1,14 @@
 import * as React from "react";
-import {
-  Text,
-  SafeAreaView,
-  StyleSheet,
-  View,
-  BackHandler,
-} from "react-native";
-import { Button } from "../components/button";
-import { Typography } from "../components/typography";
+import { SafeAreaView, StyleSheet, View, BackHandler } from "react-native";
+
+import { Typography, Button } from "../components";
 import { navigate } from "../routes/navigator";
 import { colors, sizes } from "../theme";
 
 export const HomeScreen: React.FC<{}> = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Typography variant="Regular" style={styles.header}>
-        Memory Game
-      </Typography>
+      <Typography style={styles.header}>Memory Game</Typography>
       <View style={styles.buttons}>
         <Button
           variant="filled"

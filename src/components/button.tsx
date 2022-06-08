@@ -5,11 +5,11 @@ import {
   ViewStyle,
   StyleSheet,
   ActivityIndicator,
-  Text,
 } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+
 import { colors, sizes } from "../theme";
-import { Typography } from "./typography";
+import { Typography } from ".";
 
 type Variant = "filled" | "outlined" | "default";
 
@@ -50,9 +50,10 @@ export const Button: React.FC<ButtonProps> = ({
           style={{
             fontSize: sizes.header,
             color:
-              variant === "filled" ? colors.white : color || colors.plumWeb,
+              variant === "filled"
+                ? colors.white
+                : color || colors.redVioletCrayola,
           }}
-          variant="SemiBold"
         >
           {label}
         </Typography>
@@ -87,7 +88,7 @@ const styles = StyleSheet.create({
   outlined: {
     borderWidth: 2,
     borderStyle: "solid",
-    borderColor: colors.trueBlue,
+    borderColor: colors.redVioletCrayola,
     backgroundColor: "transparent",
   },
 });
